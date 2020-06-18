@@ -12,9 +12,7 @@ function StaffPage() {
     <main className="staff-page">
       <Header as="h1" textAlign="center" content="Staff" />
       <Card.Group centered>
-        {staff.map(master => (
-          <MasterCard master={master} key={master.name} />
-        ))}
+        {staff.map(master => <MasterCard master={master} key={master.name} />)}
       </Card.Group>
     </main>
   );

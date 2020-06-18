@@ -12,9 +12,8 @@ function App() {
         <Menu.Item name="HomePage" as={NavLink} to="/" exact />
         <Menu.Item name="Our services" as={NavLink} to="/services" />
         <Menu.Item name="Staff" as={NavLink} to="/staff" />
-        <Menu.Item name="Reviews" as={NavLink} to="/staff" />
         <Menu.Item name="Book online" as={NavLink} to="/staff" />
-        <Menu.Item name="Contacts" as={NavLink} to="/staff" />
+        <Menu.Item name="Contacts" as={NavLink} to="/contacts" />
       </Menu>
     </header>
   );

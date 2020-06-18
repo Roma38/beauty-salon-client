@@ -10,10 +10,14 @@ import Header from "./components/Header";
 import HomePage from "./components/Homepage";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
 import StaffPage from "./components/StaffPage/StaffPage";
+import ContactsPage from "./components/ContactsPage";
 import './App.scss';
 
 function App() {
-  const { staff: { staffLoadingState, error: staffError }, services: { servicesLoadingState, error: servicesError } } = useSelector(state => state);
+  const {
+    staff: { staffLoadingState, error: staffError },
+    services: { servicesLoadingState, error: servicesError }
+  } = useSelector(state => state);
 
   useFetching(getStaff);
   useFetching(getServices);
@@ -42,19 +46,10 @@ function App() {
         <Route path="/staff">
           <StaffPage />
         </Route>
-
-
-        {/* <Route path="/add">
-          <AddHeroPage />
+        <Route path="/contacts">
+          <ContactsPage />
         </Route>
 
-        <Route path="/edit/:id">
-          <EditHeroPage />
-        </Route>
-
-        <Route path="/detail/:id">
-          <HeroDetailPage />
-        </Route> */}
       </>}
     </Container>
   );

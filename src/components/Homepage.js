@@ -2,7 +2,7 @@ import React from "react";
 
 import MainPicture from "../assets/main_picture_2.png";
 
-function App() {
+function HomePage() {
   return (
     <main className="home-page">
       <img src={MainPicture} alt="Main picture" width={400} />
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
