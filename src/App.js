@@ -7,6 +7,7 @@ import { useFetching } from "./customHooks";
 import { getStaff } from "./redux/actions/staff";
 import { getServices } from "./redux/actions/services";
 import Header from "./components/Header";
+import HomePage from "./components/Homepage";
 import './App.scss';
 
 function App() {
@@ -29,9 +30,11 @@ function App() {
         </Message>}
       {staffLoadingState === "succeed" && servicesLoadingState === "succeed" && <>
         <Header />
+
         <Route path="/" exact>
-          {/* <HomePage /> */}
+          <HomePage />
         </Route>
+
 
         {/* <Route path="/add">
           <AddHeroPage />
