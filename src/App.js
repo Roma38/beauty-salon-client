@@ -8,6 +8,7 @@ import { getStaff } from "./redux/actions/staff";
 import { getServices } from "./redux/actions/services";
 import Header from "./components/Header";
 import HomePage from "./components/Homepage";
+import ServicesPage from "./components/ServicesPage/ServicesPage";
 import './App.scss';
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
 
         <Route path="/" exact>
           <HomePage />
+        </Route>
+        <Route path="/services">
+          <ServicesPage />
         </Route>
 
 

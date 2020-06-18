@@ -22,3 +22,10 @@
 .home-page__paragraph {
   padding-left: 15px;
 }
+
+.services-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
