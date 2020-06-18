@@ -9,6 +9,7 @@ import { getServices } from "./redux/actions/services";
 import Header from "./components/Header";
 import HomePage from "./components/Homepage";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
+import StaffPage from "./components/StaffPage/StaffPage";
 import './App.scss';
 
 function App() {
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path="/services">
           <ServicesPage />
+        </Route>
+        <Route path="/staff">
+          <StaffPage />
         </Route>
 
 

@@ -15,9 +15,6 @@ function CategoryCard({ category, services }) {
           ))}
         </List>
       </Card.Content>
-      {/* <Card.Content extra>
-        <Link to={`/services/add/${category}`}>Add service</Link>
-      </Card.Content> */}
     </Card>
   );
 }

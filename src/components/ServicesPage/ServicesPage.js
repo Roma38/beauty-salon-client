@@ -15,17 +15,13 @@ function ServicesPage() {
         {categories.map(category => (
           <CategoryCard
             category={category}
-            services={services.filter(
-              service => service.category === category
-            )}
+            services={services.filter(service => service.category === category)}
             key={category}
           />
         ))}
         <CategoryCard
           category="other"
-          services={services.filter(
-            service => !categories.includes(service.category)
-          )}
+          services={services.filter(service => !categories.includes(service.category))}
           key="other"
         />
       </Card.Group>
