@@ -29,3 +29,17 @@
   flex-grow: 1;
   justify-content: center;
 }
+
+.ui.grid>.google-map.column.wide {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  padding: 0;
+}
+
+.ui.grid>.column.contacts-page__right-col {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

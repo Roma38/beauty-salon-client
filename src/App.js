@@ -47,7 +47,9 @@ function App() {
           <StaffPage />
         </Route>
         <Route path="/contacts">
-          <ContactsPage />
+          <main className="contacts-page">
+            <ContactsPage />
+          </main>
         </Route>
 
       </>}
