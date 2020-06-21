@@ -17,7 +17,7 @@ function MastersCards({
       />
       <Card.Content textAlign="center">
         <Card.Header>{name}</Card.Header>
-        <Card.Description>{description}</Card.Description>
+        <Card.Description className="master-description"><p>{description}</p></Card.Description>
       </Card.Content>
     </Card>
   );

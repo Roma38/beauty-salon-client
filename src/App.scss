@@ -40,6 +40,15 @@
   justify-content: center;
 }
 
+.master-description {
+  text-overflow: ellipsis;
+  // max-height: 100px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 //common
 
 .align-center {
