@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, List } from "semantic-ui-react";
+import { Card, List, Label } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 function CategoryCard({ category, services }) {
@@ -10,6 +10,9 @@ function CategoryCard({ category, services }) {
         <List as="ul">
           {services.map((service) => (
             <List.Item key={service._id}>
+              {service.price && <List.Content floated='right'>
+                <Label color='pink' tag>{service.price} hrn</Label>
+              </List.Content>}
               <Link to={`/services/${service._id}`}>{service.name}</Link>
             </List.Item>
           ))}
