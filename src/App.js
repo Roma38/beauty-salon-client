@@ -11,6 +11,7 @@ import HomePage from "./components/HomePage";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
 import ServiceDetailsPage from "./components/ServicesPage/ServiceDetailsPage";
 import StaffPage from "./components/StaffPage/StaffPage";
+import MasterDetailsPage from "./components/StaffPage/MasterDetailsPage";
 import ContactsPage from "./components/ContactsPage";
 import './App.scss';
 
@@ -47,8 +48,11 @@ function App() {
         <Route path="/services/:id" exact>
           <ServiceDetailsPage />
         </Route>
-        <Route path="/staff">
+        <Route path="/staff" exact>
           <StaffPage />
+        </Route>
+        <Route path="/staff/:id">
+          <MasterDetailsPage />
         </Route>
         <Route path="/contacts">
           <main className="contacts-page">

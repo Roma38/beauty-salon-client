@@ -1,15 +1,15 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { API_HOST } from "../../config";
 
 function MastersCards({
-  master: { _id, name, description, services, pictureURL }
+  master: { _id, name, description, pictureURL }
 }) {
 
   return (
-    <Card>
+    <Card as={Link} to={`/staff/${_id}`}>
       <Image
         src={`${API_HOST}/images/staff/${pictureURL || "image.png"}`}
         wrapped
