@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header, Image, Button } from "semantic-ui-react";
+import { Header, Image, Button, Segment } from "semantic-ui-react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -7,7 +7,7 @@ import { API_HOST } from "../../config";
 
 function MasterDetailsPage() {
   const { id } = useParams();
-  const staff = useSelector(state => state.staff);
+  const { staff, services } = useSelector(state => state);
   const [master, setMaster] = useState({});
 
   useEffect(() => {
@@ -25,6 +25,21 @@ function MasterDetailsPage() {
         rounded
       />
       <p className="align-center">{master.description}</p>
+      
+      <Segment.Group compact horizontal>
+        {master.services && master.services.map(id => {
+          const service = services.items.find(({ _id }) => _id === id);
+          return service && <Segment textAlign='center' key={id}>
+            <Image src={`${API_HOST}/images/services/${service.pictureURL || "image.png"}`}
+              centered
+              size='small'
+              rounded
+            />
+            <span>{service.name}</span>
+          </Segment>
+        })}
+      </Segment.Group>
+
       <div className="align-center">
         <Button color="pink" content="Book" />
       </div>
