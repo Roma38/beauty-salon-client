@@ -10,7 +10,7 @@ function CategoryCard({ category, services }) {
         <List as="ul">
           {services.map((service) => (
             <List.Item key={service._id}>
-              <Link to={`/services/edit/${service._id}`}>{service.name}</Link>
+              <Link to={`/services/${service._id}`}>{service.name}</Link>
             </List.Item>
           ))}
         </List>

@@ -7,8 +7,9 @@ import { useFetching } from "./customHooks";
 import { getStaff } from "./redux/actions/staff";
 import { getServices } from "./redux/actions/services";
 import Header from "./components/Header";
-import HomePage from "./components/Homepage";
+import HomePage from "./components/HomePage";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
+import ServiceDetailsPage from "./components/ServicesPage/ServiceDetailsPage";
 import StaffPage from "./components/StaffPage/StaffPage";
 import ContactsPage from "./components/ContactsPage";
 import './App.scss';
@@ -40,8 +41,11 @@ function App() {
         <Route path="/" exact>
           <HomePage />
         </Route>
-        <Route path="/services">
+        <Route path="/services" exact>
           <ServicesPage />
+        </Route>
+        <Route path="/services/:id" exact>
+          <ServiceDetailsPage />
         </Route>
         <Route path="/staff">
           <StaffPage />

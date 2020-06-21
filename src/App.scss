@@ -1,7 +1,3 @@
-// .float-left {
-//   float: left;
-// }
-
 .application.ui.container {
   min-height: 100vh;
   display: flex;
@@ -23,7 +19,7 @@
   padding-left: 25px;
 }
 
-.services-page, .staff-page, .contacts-page {
+.services-page, .service-details-page, .staff-page, .contacts-page {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -42,4 +38,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+//common
+
+.align-center {
+  text-align: center;
 }
