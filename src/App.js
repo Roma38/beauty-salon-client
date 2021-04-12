@@ -54,6 +54,9 @@ function App() {
         <Route path="/staff/:id">
           <MasterDetailsPage />
         </Route>
+        <Route path="/booking">
+          <Message negative>This feature not implemented yet :(</Message>
+        </Route>
         <Route path="/contacts">
           <main className="contacts-page">
             <ContactsPage />
