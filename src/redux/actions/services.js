@@ -22,5 +22,5 @@ export const getServices = () => dispatch => {
   axios
     .get(`${API_HOST}/services`)
     .then(({ data }) => dispatch(servicesLoadSucceed(data)))
-    .catch(error => dispatch(servicesLoadFailed(error)));
+    .catch(error => dispatch(servicesLoadFailed(error.message)));
 };

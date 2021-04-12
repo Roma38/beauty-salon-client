@@ -22,5 +22,5 @@ export const getStaff = () => dispatch => {
   axios
     .get(`${API_HOST}/staff`)
     .then(({ data }) => dispatch(staffLoadSucceed(data)))
-    .catch(error => dispatch(staffLoadFailed(error)));
+    .catch(error => dispatch(staffLoadFailed(error.message)));
 };
